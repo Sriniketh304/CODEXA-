@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "The Future of Web Development in 2025",
+        "excerpt": "Discover the latest trends in web development, from AI-driven coding to WebAssembly and beyond.",
+        "date": "October 15, 2024",
+        "author": "Arjun Mehta",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop"
+    },
+    {
+        "id": 2,
+        "title": "Why React is Still King",
+        "excerpt": "Despite the rise of new frameworks, React continues to dominate the frontend landscape. Here's why.",
+        "date": "November 2, 2024",
+        "author": "Sarah Khan",
+        "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+        "id": 3,
+        "title": "Getting Started with Backend Engineering",
+        "excerpt": "A comprehensive guide for frontend developers looking to transition into full-stack roles.",
+        "date": "November 20, 2024",
+        "author": "David Chen",
+        "image": "https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop"
+    }
+]

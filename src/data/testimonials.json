@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Rohan",
+        "review": "Codexa helped me switch careers — worth it!",
+        "rating": 5,
+        "role": "Frontend Developer"
+    },
+    {
+        "id": 2,
+        "name": "Anjali",
+        "review": "Loved the teaching style and real-world projects.",
+        "rating": 5,
+        "role": "Student"
+    },
+    {
+        "id": 3,
+        "name": "Michael",
+        "review": "Amazing curriculum and supportive instructors!",
+        "rating": 4.7,
+        "role": "Freelancer"
+    }
+]

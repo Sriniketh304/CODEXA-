@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Arjun Mehta",
+        "role": "Senior React Developer",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop",
+        "bio": "Ex-Google engineer with 8 years of experience in frontend architecture."
+    },
+    {
+        "id": 2,
+        "name": "Sarah Khan",
+        "role": "Full Stack Lead",
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop",
+        "bio": "Passionate educator and open source contributor. Expert in MERN stack."
+    },
+    {
+        "id": 3,
+        "name": "David Chen",
+        "role": "Backend Specialist",
+        "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop",
+        "bio": "Specializes in scalable systems and microservices using Node.js and Go."
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "React Developer",
+        "duration": "3 Months",
+        "price": "₹30,000",
+        "level": "Beginner to Advanced",
+        "mode": "Online",
+        "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2070&auto=format&fit=crop",
+        "description": "Master React.js from scratch. Learn Hooks, Redux, and build real-world projects."
+    },
+    {
+        "id": 2,
+        "name": "Full Stack Developer",
+        "duration": "3 Months",
+        "price": "₹30,000",
+        "level": "Beginner to Advanced",
+        "mode": "Online",
+        "image": "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=2070&auto=format&fit=crop",
+        "description": "Become a full-stack developer with MERN stack. Build scalable applications."
+    },
+    {
+        "id": 3,
+        "name": "Backend Developer (Nest.js)",
+        "duration": "3 Months",
+        "price": "₹30,000",
+        "level": "Intermediate",
+        "mode": "Online",
+        "image": "https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop",
+        "description": "Deep dive into backend with Nest.js, TypeScript, and Microservices architecture."
+    }
+]
