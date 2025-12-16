@@ -7,15 +7,17 @@ import {
     TextField,
     Button,
     MenuItem,
-    Typography,
     IconButton,
     Box
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const EnrollmentDialog = ({ open, onClose, courseName }) => {
+    // State to hold form data
     const [formData, setFormData] = useState({
         fullName: '',
+        phone: '',
         email: '',
         qualification: ''
     });
@@ -27,45 +29,87 @@ const EnrollmentDialog = ({ open, onClose, courseName }) => {
         'Other'
     ];
 
+    // Handle input changes
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    // Handle Form Submission (WhatsApp Only)
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // 1. Construct the WhatsApp message
+        const message = `*New Enrollment Request*
+    
+*Name:* ${formData.fullName}
+*Phone:* ${formData.phone}
+*Email:* ${formData.email}
+*Qualification:* ${formData.qualification}
+*Course:* ${courseName || 'General Inquiry'}
+    
+Please contact me.`;
+
+        // 2. Encode message for URL
+        const encodedMessage = encodeURIComponent(message);
+
+        // 3. Open WhatsApp with pre-filled message
+        // Uses the universal WhatsApp API link
+        window.open(`https://wa.me/917286944216?text=${encodedMessage}`, '_blank');
+
+        // 4. Close dialog and reset form
+        onClose();
+        setFormData({ fullName: '', phone: '', email: '', qualification: '' });
+    };
+
     return (
-        <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth PaperProps={{ sx: { borderRadius: 3, p: 1 } }}>
-            <DialogTitle sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', pb: 1 }}>
-                <Typography variant="h5" fontWeight="bold">
-                    {courseName ? `Enroll in ${courseName}` : 'Get Started with Codexa'}
-                </Typography>
+        <Dialog
+            open={open}
+            onClose={onClose}
+            maxWidth="xs"
+            fullWidth
+            PaperProps={{ sx: { borderRadius: 3 } }}
+        >
+            <DialogTitle sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', pb: 1, pt: 2 }}>
+                <Box>
+                    <Box component="span" sx={{ fontSize: '1.1rem', fontWeight: 'bold', display: 'block' }}>
+                        {courseName ? 'Enroll Now' : 'Get Started'}
+                    </Box>
+                    <Box component="span" sx={{ fontSize: '0.8rem', color: 'text.secondary', fontWeight: 'normal' }}>
+                        {courseName || 'Start your journey'}
+                    </Box>
+                </Box>
                 <IconButton onClick={onClose} size="small">
                     <CloseIcon />
                 </IconButton>
             </DialogTitle>
 
-            {/* Standard Form Submission to FormSubmit */}
-            <form action="https://formsubmit.co/srinikethkusha@gmail.com" method="POST" target="_blank">
-                <DialogContent>
-                    <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
-                        Fill in your details below. A verification page will open in a new tab.
-                    </Typography>
-
-                    {/* Hidden Configuration Fields */}
-                    <input type="hidden" name="_subject" value={`New Enrollment: ${courseName || 'General Inquiry'}`} />
-                    <input type="hidden" name="_template" value="table" />
-                    <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_next" value={window.location.href} />
-                    <input type="hidden" name="course_name" value={courseName || 'General Inquiry'} />
-
-                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+            <form onSubmit={handleSubmit}>
+                <DialogContent sx={{ pt: 1 }}>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                         <TextField
                             label="Full Name"
-                            name="name"
+                            name="fullName"
                             value={formData.fullName}
                             onChange={handleChange}
                             fullWidth
                             required
+                            size="small"
                             variant="outlined"
                         />
+
+                        <TextField
+                            label="Phone Number"
+                            name="phone"
+                            type="tel"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            fullWidth
+                            required
+                            size="small"
+                            variant="outlined"
+                            placeholder="+91"
+                        />
+
                         <TextField
                             label="Email Address"
                             name="email"
@@ -74,16 +118,18 @@ const EnrollmentDialog = ({ open, onClose, courseName }) => {
                             onChange={handleChange}
                             fullWidth
                             required
+                            size="small"
                             variant="outlined"
                         />
                         <TextField
                             select
-                            label="Present Qualification"
+                            label="Qualification"
                             name="qualification"
                             value={formData.qualification}
                             onChange={handleChange}
                             fullWidth
                             required
+                            size="small"
                             variant="outlined"
                         >
                             {qualifications.map((option) => (
@@ -94,18 +140,19 @@ const EnrollmentDialog = ({ open, onClose, courseName }) => {
                         </TextField>
                     </Box>
                 </DialogContent>
-                <DialogActions sx={{ px: 3, pb: 3 }}>
-                    <Button onClick={onClose} color="inherit" sx={{ mr: 1 }}>
+                <DialogActions sx={{ px: 3, pb: 3, pt: 1 }}>
+                    <Button onClick={onClose} color="inherit" size="small">
                         Cancel
                     </Button>
                     <Button
                         type="submit"
                         variant="contained"
-                        color="primary"
-                        size="large"
-                        sx={{ px: 4 }}
+                        color="success"
+                        size="medium"
+                        sx={{ px: 3 }}
+                        endIcon={<WhatsAppIcon />}
                     >
-                        Submit
+                        Send via WhatsApp
                     </Button>
                 </DialogActions>
             </form>

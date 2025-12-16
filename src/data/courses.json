@@ -28,5 +28,15 @@
         "mode": "Online",
         "image": "https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop",
         "description": "Deep dive into backend with Nest.js, TypeScript, and Microservices architecture."
+    },
+    {
+        "id": 4,
+        "name": "Java Developer",
+        "duration": "3 Months",
+        "price": "₹30,000",
+        "level": "Intermediate",
+        "mode": "Online",
+        "image": "https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop",
+        "description": "Deep dive into backend with Nest.js, TypeScript, and Microservices architecture."
     }
 ]

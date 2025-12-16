@@ -43,6 +43,18 @@ const Home = () => {
                             </Grid>
                         ))}
                     </Grid>
+                    <Box sx={{ mt: 6, textAlign: 'center' }}>
+                        <Button
+                            component={Link}
+                            to="/courses"
+                            variant="outlined"
+                            size="large"
+                            color="primary"
+                            sx={{ px: 4, py: 1.5, borderRadius: 2 }}
+                        >
+                            Explore All Courses
+                        </Button>
+                    </Box>
                 </Container>
             </Box>
 

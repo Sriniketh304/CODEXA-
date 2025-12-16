@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background: Red Rounded Square -->
+  <rect width="512" height="512" rx="128" fill="#d32f2f"/>
+  
+  <!-- Icon: White Code Brackets with Slash -->
+  <path d="M160 368 L70 256 L160 144 M352 368 L442 256 L352 144 M230 416 L290 96" 
+        stroke="white" 
+        stroke-width="48" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none"/>
+</svg>
