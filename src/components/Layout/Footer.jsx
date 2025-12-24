@@ -4,6 +4,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -31,16 +32,16 @@ const Footer = () => {
                         <Typography variant="h6" color="text.primary" gutterBottom fontWeight="bold">
                             Quick Links
                         </Typography>
-                        <Link href="/courses" color="text.secondary" display="block" sx={{ mb: 1, textDecoration: 'none', '&:hover': { color: 'primary.main' } }}>
+                        <Link component={RouterLink} to="/courses" color="text.secondary" display="block" sx={{ mb: 1, textDecoration: 'none', '&:hover': { color: 'primary.main' } }}>
                             Courses
                         </Link>
-                        <Link href="/blog" color="text.secondary" display="block" sx={{ mb: 1, textDecoration: 'none', '&:hover': { color: 'primary.main' } }}>
+                        <Link component={RouterLink} to="/blog" color="text.secondary" display="block" sx={{ mb: 1, textDecoration: 'none', '&:hover': { color: 'primary.main' } }}>
                             Blog
                         </Link>
-                        <Link href="/about" color="text.secondary" display="block" sx={{ mb: 1, textDecoration: 'none', '&:hover': { color: 'primary.main' } }}>
+                        <Link component={RouterLink} to="/about" color="text.secondary" display="block" sx={{ mb: 1, textDecoration: 'none', '&:hover': { color: 'primary.main' } }}>
                             About Us
                         </Link>
-                        <Link href="/contact" color="text.secondary" display="block" sx={{ mb: 1, textDecoration: 'none', '&:hover': { color: 'primary.main' } }}>
+                        <Link component={RouterLink} to="/contact" color="text.secondary" display="block" sx={{ mb: 1, textDecoration: 'none', '&:hover': { color: 'primary.main' } }}>
                             Contact
                         </Link>
                     </Grid>
