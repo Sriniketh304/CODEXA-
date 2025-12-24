@@ -3,6 +3,7 @@ import { Box, Container, Typography, Grid, TextField, Button, Paper } from '@mui
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
@@ -18,7 +19,22 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert('Thank you for contacting us! We will get back to you soon.');
+
+        // Construct the WhatsApp message
+        const message = `*New Contact Inquiry*
+        
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Message:*
+${formData.message}
+        
+Please get back to me.`;
+
+        // Encode message and open WhatsApp
+        const encodedMessage = encodeURIComponent(message);
+        window.open(`https://wa.me/917286944216?text=${encodedMessage}`, '_blank');
+
+        // Reset form
         setFormData({ name: '', email: '', message: '' });
     };
 
@@ -111,8 +127,15 @@ const Contact = () => {
                                             />
                                         </Grid>
                                         <Grid item xs={12}>
-                                            <Button type="submit" variant="contained" size="large" fullWidth>
-                                                Send Message
+                                            <Button
+                                                type="submit"
+                                                variant="contained"
+                                                size="large"
+                                                fullWidth
+                                                color="success"
+                                                startIcon={<WhatsAppIcon />}
+                                            >
+                                                Send Message via WhatsApp
                                             </Button>
                                         </Grid>
                                     </Grid>

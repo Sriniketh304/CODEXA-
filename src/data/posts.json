@@ -3,6 +3,7 @@
         "id": 1,
         "title": "The Future of Web Development in 2025",
         "excerpt": "Discover the latest trends in web development, from AI-driven coding to WebAssembly and beyond.",
+        "content": "Web development is evolving rapidly. In 2025, we are seeing a massive shift towards AI-assisted coding, where tools like GitHub Copilot and Google's Project IDX are becoming standard. WebAssembly (Wasm) is also gaining traction, allowing high-performance applications to run in the browser securely. Frameworks are becoming more server-centric with the rise of React Server Components, blurring the lines between frontend and backend.",
         "date": "October 15, 2024",
         "author": "Arjun Mehta",
         "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop"
@@ -11,6 +12,7 @@
         "id": 2,
         "title": "Why React is Still King",
         "excerpt": "Despite the rise of new frameworks, React continues to dominate the frontend landscape. Here's why.",
+        "content": "With the release of React 19, the library has solidified its position as the market leader. Features like the new compiler, simplified hooks, and better server-side rendering support make it indispensable. The ecosystem is vast, job opportunities are abundant, and the community support is unmatched. While other frameworks like Svelte and SolidJS are innovative, React's stability and enterprise adoption keep it at the top.",
         "date": "November 2, 2024",
         "author": "Sarah Khan",
         "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2070&auto=format&fit=crop"
@@ -19,6 +21,7 @@
         "id": 3,
         "title": "Getting Started with Backend Engineering",
         "excerpt": "A comprehensive guide for frontend developers looking to transition into full-stack roles.",
+        "content": "Transitioning to backend development can be daunting. Start by understanding the basics of HTTP, APIs, and databases. Node.js is a great entry point for JavaScript developers. Learn about SQL vs. NoSQL databases, REST vs. GraphQL, and the importance of authentication and security. Building a simple CRUD application is the best way to get your hands dirty and learn the core concepts.",
         "date": "November 20, 2024",
         "author": "David Chen",
         "image": "https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop"
